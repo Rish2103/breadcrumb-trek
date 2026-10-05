@@ -157,8 +157,11 @@ data class NativeNavState(
     val recoveryTargetEast: Float = 0.0f,
     val recoveryTargetNorth: Float = 0.0f,
     val guidanceVectorEast: Float = 0.0f,
-    val guidanceVectorNorth: Float = 0.0f
+    val guidanceVectorNorth: Float = 0.0f,
+    val travelHeadingRad: Float = 0.0f
 ) {
+    val travelHeadingDeg: Float get() = Math.toDegrees(travelHeadingRad.toDouble()).toFloat()
+
     val isTrailRecording: Boolean get() = trailStateCode == 1
     val isReturnReady: Boolean get() = trailStateCode == 2
     val isTrailIdle: Boolean get() = trailStateCode == 0
@@ -220,6 +223,7 @@ data class NativeNavState(
             val recovTN = if (buffer.size >= 39) buffer[36] else 0.0f
             val gVecE = if (buffer.size >= 39) buffer[37] else 0.0f
             val gVecN = if (buffer.size >= 39) buffer[38] else 0.0f
+            val travHeadRad = if (buffer.size >= 40) buffer[39] else headingRad
 
             return NativeNavState(
                 east = buffer[0],
@@ -261,7 +265,8 @@ data class NativeNavState(
                 recoveryTargetEast = recovTE,
                 recoveryTargetNorth = recovTN,
                 guidanceVectorEast = gVecE,
-                guidanceVectorNorth = gVecN
+                guidanceVectorNorth = gVecN,
+                travelHeadingRad = travHeadRad
             )
         }
     }
