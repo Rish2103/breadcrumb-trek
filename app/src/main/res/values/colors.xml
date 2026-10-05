@@ -1,0 +1,5 @@
+<resources>
+    <color name="bg_dark">#121418</color>
+    <color name="text_primary">#F0F4F8</color>
+    <color name="accent_teal">#2DD4BF</color>
+</resources>

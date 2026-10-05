@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Breadcrumb Trek</string>
+    <string name="status_ready">Breadcrumb Trek Ready</string>
+    <string name="status_pending_jni">Initializing native engine…</string>
+</resources>

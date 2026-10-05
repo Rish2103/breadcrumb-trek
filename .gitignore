@@ -1,0 +1,88 @@
+# ==============================================================================
+# Breadcrumb Trek - Git Ignore Configuration
+# ==============================================================================
+
+# Android & Gradle Build Artifacts
+.gradle/
+build/
+app/build/
+**/build/
+bin/
+gen/
+out/
+.cxx/
+.externalNativeBuild/
+
+# Built Application Packages
+*.apk
+*.aar
+*.ap_
+*.aab
+*.dex
+*.class
+
+# Machine-Specific Gradle Properties & Local Configurations
+local.properties
+
+# Android Studio, IntelliJ IDEA & Code Editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# CMake & Native Build Outputs
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.ninja
+*.ninja_deps
+*.ninja_log
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Native Test Binaries & Precompiled Test Artifacts
+native-tests/*_arm64*
+native-tests/*_x86*
+native-tests/native_*_test*
+native-tests/poco_*_test*
+native-tests/poco_*_validation*
+native-tests/tests/*_arm64*
+native-tests/tests/*_x86*
+native-tests/tests/native_*_test*
+native-tests/tests/poco_*_validation*
+native-tests/tests/poco_*_test*
+native-tests/tests/trial_exe
+
+# Kotlin Compiler Artifacts
+.kotlin/
+.attach_pid*
+
+# Logs, Dumps & Temporary Files
+*.log
+*.tmp
+*.bak
+*.swp
+*.orig
+*.rej
+crashlytics-build.properties
+*.xml.dump
+
+# Security, Signing Keys & Certificates
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+google-services.json
